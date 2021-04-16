@@ -86,6 +86,11 @@ function App() {
           variant='outlined'
           value={inputField}
           onChange={(event) => setInputField(event.target.value)}
+          onKeyPress={(event) => {
+            if (event.key === 'Enter') {
+              handleGenerateClick()
+            }
+          }}
         />
       </Grid>
    
